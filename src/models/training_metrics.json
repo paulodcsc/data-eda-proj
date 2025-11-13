@@ -1,0 +1,20 @@
+[
+  {
+    "modelo":"RandomForest",
+    "rmse":3.9516735978,
+    "mae":2.8467282919,
+    "r2":0.8176470228
+  },
+  {
+    "modelo":"HistGradientBoosting",
+    "rmse":4.0800852928,
+    "mae":2.7590528605,
+    "r2":0.8056031553
+  },
+  {
+    "modelo":"GradientBoosting",
+    "rmse":4.4521844536,
+    "mae":3.323463746,
+    "r2":0.7685287669
+  }
+]
