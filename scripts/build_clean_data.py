@@ -7,8 +7,9 @@ import pandas as pd
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
-RAW_DIR = Path("data/raw")
-CLEAN_DIR = Path("data/clean")
+ROOT = Path(__file__).resolve().parent.parent
+RAW_DIR = ROOT / "data" / "raw"
+CLEAN_DIR = ROOT / "data" / "clean"
 CLEAN_DIR.mkdir(exist_ok=True)
 
 

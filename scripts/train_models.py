@@ -7,12 +7,13 @@ from sklearn.ensemble import GradientBoostingRegressor, HistGradientBoostingRegr
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.model_selection import RandomizedSearchCV, train_test_split
 
-RAW_MODEL_DIR = Path('src/models')
-MODEL_OUTPUT = RAW_MODEL_DIR / 'trained'
-METRICS_OUTPUT = RAW_MODEL_DIR / 'training_metrics.json'
+ROOT = Path(__file__).resolve().parent.parent
+MODEL_DIR = ROOT / 'src' / 'models'
+MODEL_OUTPUT = MODEL_DIR / 'trained'
+METRICS_OUTPUT = MODEL_DIR / 'training_metrics.json'
 MODEL_OUTPUT.mkdir(parents=True, exist_ok=True)
 
-DATA_FILE = Path('data/clean/olist_ml_ready.csv')
+DATA_FILE = ROOT / 'data' / 'clean' / 'olist_ml_ready.csv'
 df = pd.read_csv(DATA_FILE)
 print(f'Dataset completo carregado com {len(df)} registros.')
 

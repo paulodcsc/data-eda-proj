@@ -6,7 +6,7 @@ echo "1) Linux / macOS"
 echo "2) Windows (Git Bash / WSL)"
 read -p "Escolha (1 ou 2): " so
 
-VENV_DIR="venv"
+VENV_DIR=".venv"
 
 echo "-> Criando ambiente virtual..."
 python3 -m venv $VENV_DIR 2>/dev/null || python -m venv $VENV_DIR
